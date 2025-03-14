@@ -1,0 +1,130 @@
+.section1_wrapper {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.925);
+    height: 640px;
+    padding: 70px 250px;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+.section1_content {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    justify-items: start;
+    /* align-items: baseline;
+    align-content: center;
+    row-gap: 2px; */
+    height: 60%;
+}
+
+.section1_content h1 {
+    font-size: 3em;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+
+.section1_content button {
+    background-color: rgba(0, 162, 255, 0.822);
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px 40px;
+}
+
+.button_info {
+    color: #cdced1;
+    padding: 7px;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.171);
+    font-size: 1em;
+}
+
+.section1_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns: text & image */
+    align-items: center; /* Aligns content vertically */
+    justify-content: center;
+    background-color: #121212; /* Dark background */
+    padding: 80px 10%;
+    gap: 40px; /* Space between text & image */
+}
+
+/* Content section */
+.section1_content {
+    max-width: 500px;
+}
+
+.section1_content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.button_info {
+    display: inline-block;
+    color: #cdced1;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.section1_content button {
+    background-color: #0078D4;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 40px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.section1_content button:hover {
+    background-color: #005EA2;
+}
+
+/* Image styling */
+.section1_wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .section1_wrapper {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+        text-align: center;
+    }
+
+    .section1_content {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .section1_content h1 {
+        font-size: 2.5rem;
+    }
+
+    .section1_wrapper img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .section1_content h1 {
+        font-size: 2rem;
+    }
+
+    .section1_content button {
+        font-size: 1rem;
+        padding: 12px 30px;
+    }
+}

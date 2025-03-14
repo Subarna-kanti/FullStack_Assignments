@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.outer_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100wh;
+}
+
+.content_dimension {
+    display: flex;
+    width: 1200px;
+    height: 500px;
+}
+
+.left_content_design {
+    display: flex;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-grow: 1;
+    color: white;
+}
+
+.right_content_design {
+    display: flex;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-grow: 2;
+    color: white;
+}
