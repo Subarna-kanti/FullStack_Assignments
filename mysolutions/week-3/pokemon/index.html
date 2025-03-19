@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="poke_input">
+            <h1>Pokémon Cards</h1>
+            <div class="config">
+                <div>
+                    <label for="numPokemon">Enter the number of pokemons: </label>
+                    <input type="number" id="numPokemon" min="1">
+                </div>
+                <div>
+                    <label for="category">Category: </label>
+                    <select id="category" aria-label="Select Pokémon Type">
+                    </select>
+                </div>
+            </div>
+            <button id="submitBtn" type="submit">Get Pokemons</button>
+        </div>
+        <div class="poke_output"></div>
+    </div>
+    <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
+    <script type="module"  src="script.js"></script>
+    
+</body>
+
+</html>
