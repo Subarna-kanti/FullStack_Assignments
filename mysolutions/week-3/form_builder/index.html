@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="input_container">
+            <h1>🛠️ Form Builder</h1>
+
+            <div class="form-group">
+                <h2>Select Field Type</h2>
+                <select id="field-selector">
+                    <option value="" disabled selected>Select a Category</option>
+                    <option value="text">Text Input</option>
+                    <option value="checkbox">Checkboxes</option>
+                    <option value="radio">Radio Buttons</option>
+                </select>
+            </div>
+
+            <div id="field_labels" class="form-group">
+                <h2>Field Labels</h2>
+                <div id="nav_field_labels">
+                    <input type="text" placeholder="Enter field label" required>
+                </div>
+                <button id="add_labels" type="button" class="secondary-btn">+ Add Label</button>
+            </div>
+
+            <button id="submit" type="submit">➕ Add Field</button>
+        </div>
+
+        <div id="form_preview" class="output_container">
+            <h1>📋 Form Preview</h1>
+            <form></form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
