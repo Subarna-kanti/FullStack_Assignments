@@ -1,4 +1,4 @@
 tmp*
-package*
 node_modules
 .vscode
+todo.json
