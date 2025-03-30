@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <!-- <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="taskify.css"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>User Identification</h1>
+        <div>
+            Signup
+            <input type="text" id="signup-username" name="username" placeholder="Username">
+            <input type="password" id="signup-password" name="password" placeholder="Password">
+            <button onclick="signup()">Submit</button>
+        </div>
+        <div>
+            Signin
+            <input type="text" id="signin-username" name="username" placeholder="Username">
+            <input type="text" id="signin-password" name="password" placeholder="Password">
+            <button onclick="signin(); return false">Submit</button>
+        </div>
+        <div id="taskify" style="display: none">
+        </div>
+        <div>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+    <script src="sign.js"></script>
+    <script src="taskify.js"></script>
+</body>
+
+</html>
