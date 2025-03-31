@@ -60,7 +60,6 @@ app.post("/signup", (req, res) => {
 
 app.post("/signin", (req, res) => {
     const validation = signinSchema.safeParse(req.body);
-    console.log(SECRET_KEY);
 
     if (!validation.success) {
         return res.status(400).json({ error: validation.error.errors });
@@ -95,7 +94,6 @@ app.post("/logout", (req, res) => {
 })
 
 function authorize(req, res, next) {
-    console.log(SECRET_KEY);
     const token = req.headers["authorization"];
     jwt.verify(token, SECRET_KEY, (error, decoded) => {
         if (error) {
