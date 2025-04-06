@@ -40,6 +40,10 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static("../frontend"));
 
+app.get("/", (req, res) => {
+    res.send("Hello World");
+});
+
 app.post("/signup", (req, res) => {
     const validation = signupSchema.safeParse(req.body);
 
