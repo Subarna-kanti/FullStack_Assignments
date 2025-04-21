@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom'
 
 function AppCounter() {
@@ -127,7 +127,7 @@ const ErrorComponent = () => {
 }
 
 // Single Page Application
-const App = () => {
+const App2 = () => {
   return <div>
     <BrowserRouter>
       <Routes>
@@ -142,6 +142,45 @@ const App = () => {
   </div>
 }
 
+// useref
+function Signup() {
+  const inputRef = useRef();
+  
+  function focusOnInput() {
+    inputRef.current.focus();
+  }
+
+  return (
+    <div>
+      <input type="text" ref={inputRef} placeholder="Enter your name" />
+      <button onClick={focusOnInput}>Focus on Input</button>
+    </div>
+  );
+}
+
+function Stopwatch() {
+  const [time, setTime] = useState(0);
+  const intervalRef = useRef(null);
+  const startTimer = () => {
+    if (!intervalRef.current) {
+      intervalRef.current = setInterval(() => {
+        setTime((prevTime) => prevTime + 1);
+      }, 1000);
+    }
+  }
+  const stopTimer = () => {
+    clearInterval(intervalRef.current);
+    intervalRef.current = null;
+  }
+  return (
+    <div>
+      <h1>Stopwatch</h1>
+      <p>{time} seconds</p>
+      <button onClick={startTimer}>Start</button>
+      <button onClick={stopTimer}>Stop</button>
+    </div>
+  );
+}
 // Layout
 function Layout() {
   return <div style={{ height: "100vh" }}>
@@ -190,7 +229,7 @@ function Class12Program() {
   </div>
 }
 
-const App2 = () => {
+const App = () => {
   return (
     <div>
       <h1>Welcome to the App</h1>
@@ -224,6 +263,10 @@ const App2 = () => {
       />
       <h2>Fragment Example</h2>
       <FragmentExample />
+      <h2>Signup Form</h2>
+      <Signup />
+      <h2>Stopwatch</h2>
+      <Stopwatch />
     </div>
   )
 }
